@@ -14,6 +14,8 @@
     --gray-text: #cbd5e1;
     --border-color: #334155;
     --success-color: #10b981;
+    --warning-color: #f59e0b;
+    --danger-color: #ef4444;
 }
 
 body {
@@ -238,6 +240,13 @@ html {
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
 }
 
+.battery-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--light-text);
+    margin-bottom: 1rem;
+}
+
 .battery-display {
     display: flex;
     align-items: center;
@@ -248,7 +257,7 @@ html {
 
 .battery-display i {
     font-size: 2rem;
-    color: var(--primary-color);
+    transition: color 0.3s ease;
 }
 
 #batteryPercent {
@@ -260,6 +269,18 @@ html {
 #batteryStatus {
     color: var(--gray-text);
     font-size: 0.9rem;
+}
+
+.battery-high {
+    color: var(--success-color);
+}
+
+.battery-medium {
+    color: var(--warning-color);
+}
+
+.battery-low {
+    color: var(--danger-color);
 }
 
 /* Section Title */
@@ -390,6 +411,66 @@ html {
     color: var(--light-text);
 }
 
+/* Reviews Section */
+.reviews {
+    padding: 5rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.reviews-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.review-card {
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.1), rgba(139, 92, 246, 0.1));
+    border: 2px solid var(--border-color);
+    border-radius: 15px;
+    padding: 2rem;
+    transition: all 0.3s ease;
+}
+
+.review-card:hover {
+    transform: translateY(-15px);
+    border-color: var(--primary-color);
+    box-shadow: 0 15px 40px rgba(99, 102, 241, 0.3);
+}
+
+.review-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.review-pfp {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--primary-color);
+}
+
+.review-info h4 {
+    color: var(--light-text);
+    font-size: 1rem;
+    margin-bottom: 0.25rem;
+}
+
+.review-role {
+    color: var(--primary-color);
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.review-text {
+    color: var(--gray-text);
+    line-height: 1.8;
+    font-style: italic;
+}
+
 /* Work Section */
 .work {
     padding: 5rem 2rem;
@@ -422,9 +503,13 @@ html {
 }
 
 .work-btn:hover, .sub-work-btn:hover {
-    transform: translateY(-10px);
+    transform: translateY(-8px);
     box-shadow: 0 15px 40px rgba(99, 102, 241, 0.5);
     border-color: var(--accent-color);
+}
+
+.work-btn:active, .sub-work-btn:active {
+    transform: translateY(-4px);
 }
 
 .work-btn i, .sub-work-btn i {
@@ -519,6 +604,7 @@ html {
     border-radius: 15px;
     overflow: hidden;
     transition: all 0.3s ease;
+    padding: 2rem;
 }
 
 .project-card:hover {
@@ -527,70 +613,15 @@ html {
     box-shadow: 0 15px 40px rgba(99, 102, 241, 0.3);
 }
 
-.project-embed {
-    width: 100%;
-    height: 250px;
-    background: var(--darker-bg);
-}
-
-.project-embed iframe {
-    width: 100%;
-    height: 100%;
-}
-
 .project-card h3 {
-    padding: 1.5rem 1.5rem 0.5rem;
     color: var(--light-text);
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
 }
 
-.project-card p {
-    padding: 0 1.5rem 1rem;
+.project-description {
     color: var(--gray-text);
-}
-
-.copy-template {
-    padding: 1.5rem;
-    border-top: 1px solid var(--border-color);
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-}
-
-.copy-template code {
-    background: var(--darker-bg);
-    padding: 1rem;
-    border-radius: 10px;
-    color: var(--primary-color);
-    font-family: 'Courier New', monospace;
-    font-size: 0.85rem;
-    overflow-x: auto;
-    white-space: pre-wrap;
-    word-break: break-word;
-    border: 1px solid var(--border-color);
-}
-
-.copy-btn {
-    background: var(--primary-color);
-    color: white;
-    border: none;
-    padding: 0.75rem 1.5rem;
-    border-radius: 10px;
-    cursor: pointer;
-    font-weight: 600;
-    transition: all 0.3s ease;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
-}
-
-.copy-btn:hover {
-    background: var(--secondary-color);
-    transform: translateY(-5px);
-}
-
-.copy-btn.copied {
-    background: var(--success-color);
+    line-height: 1.8;
 }
 
 /* Contact Section */
@@ -657,6 +688,10 @@ html {
 .submit-btn:hover {
     transform: translateY(-5px);
     box-shadow: 0 15px 40px rgba(99, 102, 241, 0.5);
+}
+
+.submit-btn:active {
+    transform: translateY(-2px);
 }
 
 .contact-info {
@@ -738,6 +773,10 @@ html {
 
     .skills-grid {
         grid-template-columns: repeat(2, 1fr);
+    }
+
+    .reviews-container {
+        grid-template-columns: 1fr;
     }
 
     .contact-container {
