@@ -6,6 +6,7 @@
     <title>Guardbl - 3D Artist & Programmer</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/index.min.js"></script>
 </head>
 <body>
     <!-- Navbar -->
@@ -15,6 +16,7 @@
             <ul class="nav-menu">
                 <li><a href="#home" class="nav-link">Home</a></li>
                 <li><a href="#about" class="nav-link">About Me</a></li>
+                <li><a href="#reviews" class="nav-link">Reviews</a></li>
                 <li><a href="#work" class="nav-link">Work</a></li>
                 <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
@@ -38,8 +40,9 @@
             </div>
             <div class="hero-right">
                 <div class="battery-widget float-in" style="animation-delay: 0.6s">
+                    <h3 class="battery-title">Guard's Phone</h3>
                     <div class="battery-display">
-                        <i class="fas fa-battery-full"></i>
+                        <i class="fas fa-battery-full" id="batteryIcon"></i>
                         <span id="batteryPercent">85%</span>
                     </div>
                     <p id="batteryStatus">Charging</p>
@@ -105,6 +108,78 @@
         </div>
     </section>
 
+    <!-- Reviews Section -->
+    <section id="reviews" class="reviews">
+        <h2 class="section-title">Client Reviews</h2>
+        <div class="reviews-container">
+            <div class="review-card float-in">
+                <div class="review-header">
+                    <img src="https://via.placeholder.com/50" alt="Client" class="review-pfp">
+                    <div class="review-info">
+                        <h4>Client Name</h4>
+                        <p class="review-role">Game Developer</p>
+                    </div>
+                </div>
+                <p class="review-text">"Guardbl's work exceeded my expectations! The 3D models were incredibly detailed and the code was clean and efficient."</p>
+            </div>
+
+            <div class="review-card float-in" style="animation-delay: 0.1s">
+                <div class="review-header">
+                    <img src="https://via.placeholder.com/50" alt="Client" class="review-pfp">
+                    <div class="review-info">
+                        <h4>Client Name</h4>
+                        <p class="review-role">Project Manager</p>
+                    </div>
+                </div>
+                <p class="review-text">"Professional, responsive, and delivers on time. Highly recommended for any 3D modeling or programming project!"</p>
+            </div>
+
+            <div class="review-card float-in" style="animation-delay: 0.2s">
+                <div class="review-header">
+                    <img src="https://via.placeholder.com/50" alt="Client" class="review-pfp">
+                    <div class="review-info">
+                        <h4>Client Name</h4>
+                        <p class="review-role">Studio Director</p>
+                    </div>
+                </div>
+                <p class="review-text">"One of the best talents I've worked with. Creative, skilled, and always willing to go the extra mile."</p>
+            </div>
+
+            <div class="review-card float-in" style="animation-delay: 0.3s">
+                <div class="review-header">
+                    <img src="https://via.placeholder.com/50" alt="Client" class="review-pfp">
+                    <div class="review-info">
+                        <h4>Client Name</h4>
+                        <p class="review-role">Entrepreneur</p>
+                    </div>
+                </div>
+                <p class="review-text">"Guardbl helped bring my vision to life. The combination of artistic and technical skills is rare and invaluable."</p>
+            </div>
+
+            <div class="review-card float-in" style="animation-delay: 0.4s">
+                <div class="review-header">
+                    <img src="https://via.placeholder.com/50" alt="Client" class="review-pfp">
+                    <div class="review-info">
+                        <h4>Client Name</h4>
+                        <p class="review-role">Tech Lead</p>
+                    </div>
+                </div>
+                <p class="review-text">"Excellent code quality and architectural decisions. A true full-stack professional who understands both sides."</p>
+            </div>
+
+            <div class="review-card float-in" style="animation-delay: 0.5s">
+                <div class="review-header">
+                    <img src="https://via.placeholder.com/50" alt="Client" class="review-pfp">
+                    <div class="review-info">
+                        <h4>Client Name</h4>
+                        <p class="review-role">Creative Director</p>
+                    </div>
+                </div>
+                <p class="review-text">"The attention to detail in both 3D work and programming is remarkable. A pleasure to collaborate with!"</p>
+            </div>
+        </div>
+    </section>
+
     <!-- Work Section -->
     <section id="work" class="work">
         <h2 class="section-title">My Work</h2>
@@ -158,30 +233,12 @@
             <div id="roblox-projects" class="projects-display hidden">
                 <div class="projects-grid">
                     <div class="project-card float-in">
-                        <div class="project-embed">
-                            <iframe width="100%" height="300" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
-                        </div>
                         <h3>Roblox Project 1</h3>
-                        <p>Description of your Roblox project</p>
-                        <div class="copy-template">
-                            <code id="roblox-code-1">-- Your Roblox code here</code>
-                            <button class="copy-btn" onclick="copyCode('roblox-code-1')">
-                                <i class="fas fa-copy"></i> Copy Code
-                            </button>
-                        </div>
+                        <p class="project-description">I created an engaging Roblox game featuring custom game mechanics, smooth animations, and intuitive UI design. The project involved complex scripting in Lua to handle player interactions, game logic, and real-time updates. This project showcases my ability to create immersive gaming experiences.</p>
                     </div>
                     <div class="project-card float-in" style="animation-delay: 0.2s">
-                        <div class="project-embed">
-                            <iframe width="100%" height="300" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
-                        </div>
                         <h3>Roblox Project 2</h3>
-                        <p>Description of your Roblox project</p>
-                        <div class="copy-template">
-                            <code id="roblox-code-2">-- Your Roblox code here</code>
-                            <button class="copy-btn" onclick="copyCode('roblox-code-2')">
-                                <i class="fas fa-copy"></i> Copy Code
-                            </button>
-                        </div>
+                        <p class="project-description">This Roblox project demonstrates advanced scripting techniques and architectural patterns. I implemented multiplayer functionality, server-side validation, and data persistence using Roblox's data stores. The result is a scalable and robust gaming experience that handles hundreds of concurrent players.</p>
                     </div>
                 </div>
             </div>
@@ -190,30 +247,12 @@
             <div id="web-projects" class="projects-display hidden">
                 <div class="projects-grid">
                     <div class="project-card float-in">
-                        <div class="project-embed">
-                            <iframe width="100%" height="300" src="https://example.com" frameborder="0" allowfullscreen></iframe>
-                        </div>
                         <h3>Web Project 1</h3>
-                        <p>Description of your web project</p>
-                        <div class="copy-template">
-                            <code id="web-code-1">const app = express();\napp.use(express.json());</code>
-                            <button class="copy-btn" onclick="copyCode('web-code-1')">
-                                <i class="fas fa-copy"></i> Copy Code
-                            </button>
-                        </div>
+                        <p class="project-description">A full-stack web application built with React, Node.js, and MongoDB. The frontend features a responsive design with smooth animations, while the backend handles complex business logic and API integrations. This project demonstrates my expertise in modern web development practices and best practices for scalability.</p>
                     </div>
                     <div class="project-card float-in" style="animation-delay: 0.2s">
-                        <div class="project-embed">
-                            <iframe width="100%" height="300" src="https://example.com" frameborder="0" allowfullscreen></iframe>
-                        </div>
                         <h3>Web Project 2</h3>
-                        <p>Description of your web project</p>
-                        <div class="copy-template">
-                            <code id="web-code-2">const connection = mongoose.connect(mongoUri);</code>
-                            <button class="copy-btn" onclick="copyCode('web-code-2')">
-                                <i class="fas fa-copy"></i> Copy Code
-                            </button>
-                        </div>
+                        <p class="project-description">An e-commerce platform built with Express.js and React, featuring user authentication, product catalogs, shopping cart functionality, and payment processing. This project showcases my ability to build secure, user-friendly web applications that solve real-world problems and provide excellent user experiences.</p>
                     </div>
                 </div>
             </div>
@@ -224,7 +263,7 @@
     <section id="contact" class="contact">
         <h2 class="section-title">Get In Touch</h2>
         <div class="contact-container">
-            <form class="contact-form float-in">
+            <form class="contact-form float-in" id="contactForm">
                 <div class="form-group">
                     <label for="name">Your Name</label>
                     <input type="text" id="name" name="name" required>
