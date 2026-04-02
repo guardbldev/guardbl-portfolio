@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guardbl - 3D Artist & Programmer</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">Guardbl</div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About Me</a></li>
+                <li><a href="#work" class="nav-link">Work</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="hero-left">
+                <div class="avatar-container float-in">
+                    <img src="https://via.placeholder.com/200" alt="Guardbl" class="avatar">
+                </div>
+                <h1 class="hero-title float-in" style="animation-delay: 0.2s">Guardbl</h1>
+                <p class="hero-subtitle float-in" style="animation-delay: 0.4s">3D Artist and Programmer</p>
+            </div>
+            <div class="hero-right">
+                <div class="battery-widget float-in" style="animation-delay: 0.6s">
+                    <div class="battery-display">
+                        <i class="fas fa-battery-full"></i>
+                        <span id="batteryPercent">85%</span>
+                    </div>
+                    <p id="batteryStatus">Charging</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <h2 class="section-title">About Me</h2>
+        <div class="about-container">
+            <div class="about-left float-in">
+                <img src="https://via.placeholder.com/300" alt="Profile" class="about-image">
+                <div class="about-text">
+                    <h3>Hello! I'm Guardbl</h3>
+                    <p>I'm a passionate 3D Artist and Programmer with expertise in creating stunning visual experiences and robust software solutions. With years of experience in both fields, I bring creativity and technical excellence to every project.</p>
+                    <h4>Work Experience</h4>
+                    <ul class="experience-list">
+                        <li><strong>3D Modelling Specialist</strong> - Creating high-quality 3D assets and models</li>
+                        <li><strong>Full Stack Developer</strong> - Building web applications and backend systems</li>
+                        <li><strong>Game Developer</strong> - Developing games and interactive experiences</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="about-right float-in" style="animation-delay: 0.2s">
+                <h3>Languages & Technologies</h3>
+                <div class="skills-grid">
+                    <div class="skill-item">
+                        <i class="fab fa-node"></i>
+                        <p>Node.js</p>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fab fa-js-square"></i>
+                        <p>JavaScript</p>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fab fa-react"></i>
+                        <p>React</p>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fab fa-js-square"></i>
+                        <p>TypeScript</p>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fas fa-code"></i>
+                        <p>Lua</p>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fab fa-python"></i>
+                        <p>Python</p>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fab fa-node"></i>
+                        <p>Express.js</p>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fas fa-database"></i>
+                        <p>MongoDB</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Work Section -->
+    <section id="work" class="work">
+        <h2 class="section-title">My Work</h2>
+        <div class="work-container">
+            <button class="work-btn float-in" data-category="modelling">
+                <i class="fas fa-cube"></i>
+                <span>3D Modelling</span>
+            </button>
+            <button class="work-btn float-in" data-category="programming" style="animation-delay: 0.2s">
+                <i class="fas fa-laptop-code"></i>
+                <span>Programming</span>
+            </button>
+        </div>
+
+        <!-- Modelling Gallery -->
+        <div id="modelling-section" class="work-section hidden">
+            <div class="gallery">
+                <div class="gallery-item float-in">
+                    <img src="https://via.placeholder.com/400x300" alt="3D Model 1">
+                    <h3>3D Model 1</h3>
+                </div>
+                <div class="gallery-item float-in">
+                    <img src="https://via.placeholder.com/400x300" alt="3D Model 2">
+                    <h3>3D Model 2</h3>
+                </div>
+                <div class="gallery-item float-in">
+                    <img src="https://via.placeholder.com/400x300" alt="3D Model 3">
+                    <h3>3D Model 3</h3>
+                </div>
+                <div class="gallery-item float-in">
+                    <img src="https://via.placeholder.com/400x300" alt="3D Model 4">
+                    <h3>3D Model 4</h3>
+                </div>
+            </div>
+        </div>
+
+        <!-- Programming Section -->
+        <div id="programming-section" class="work-section hidden">
+            <div class="programming-container">
+                <button class="sub-work-btn float-in" data-type="roblox">
+                    <i class="fab fa-gamepad"></i>
+                    <span>Roblox Projects</span>
+                </button>
+                <button class="sub-work-btn float-in" data-type="web" style="animation-delay: 0.2s">
+                    <i class="fas fa-globe"></i>
+                    <span>Web Projects</span>
+                </button>
+            </div>
+
+            <!-- Roblox Projects -->
+            <div id="roblox-projects" class="projects-display hidden">
+                <div class="projects-grid">
+                    <div class="project-card float-in">
+                        <div class="project-embed">
+                            <iframe width="100%" height="300" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                        <h3>Roblox Project 1</h3>
+                        <p>Description of your Roblox project</p>
+                        <div class="copy-template">
+                            <code id="roblox-code-1">-- Your Roblox code here</code>
+                            <button class="copy-btn" onclick="copyCode('roblox-code-1')">
+                                <i class="fas fa-copy"></i> Copy Code
+                            </button>
+                        </div>
+                    </div>
+                    <div class="project-card float-in" style="animation-delay: 0.2s">
+                        <div class="project-embed">
+                            <iframe width="100%" height="300" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                        <h3>Roblox Project 2</h3>
+                        <p>Description of your Roblox project</p>
+                        <div class="copy-template">
+                            <code id="roblox-code-2">-- Your Roblox code here</code>
+                            <button class="copy-btn" onclick="copyCode('roblox-code-2')">
+                                <i class="fas fa-copy"></i> Copy Code
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Web Projects -->
+            <div id="web-projects" class="projects-display hidden">
+                <div class="projects-grid">
+                    <div class="project-card float-in">
+                        <div class="project-embed">
+                            <iframe width="100%" height="300" src="https://example.com" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                        <h3>Web Project 1</h3>
+                        <p>Description of your web project</p>
+                        <div class="copy-template">
+                            <code id="web-code-1">const app = express();\napp.use(express.json());</code>
+                            <button class="copy-btn" onclick="copyCode('web-code-1')">
+                                <i class="fas fa-copy"></i> Copy Code
+                            </button>
+                        </div>
+                    </div>
+                    <div class="project-card float-in" style="animation-delay: 0.2s">
+                        <div class="project-embed">
+                            <iframe width="100%" height="300" src="https://example.com" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                        <h3>Web Project 2</h3>
+                        <p>Description of your web project</p>
+                        <div class="copy-template">
+                            <code id="web-code-2">const connection = mongoose.connect(mongoUri);</code>
+                            <button class="copy-btn" onclick="copyCode('web-code-2')">
+                                <i class="fas fa-copy"></i> Copy Code
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <h2 class="section-title">Get In Touch</h2>
+        <div class="contact-container">
+            <form class="contact-form float-in">
+                <div class="form-group">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Your Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+            <div class="contact-info float-in" style="animation-delay: 0.2s">
+                <h3>Let's Connect</h3>
+                <div class="social-links">
+                    <a href="#" class="social-btn"><i class="fab fa-github"></i></a>
+                    <a href="#" class="social-btn"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-btn"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" class="social-btn"><i class="fab fa-discord"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2026 Guardbl. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
